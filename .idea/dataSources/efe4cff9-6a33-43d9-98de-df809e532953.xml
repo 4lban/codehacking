@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="codehacking@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.3">
+    <root id="1"/>
+    <schema id="2" parent="1" name="codehacking">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="blog"/>
+    <schema id="4" parent="1" name="confirm-mail"/>
+    <schema id="5" parent="1" name="detyra"/>
+    <schema id="6" parent="1" name="ecom"/>
+    <schema id="7" parent="1" name="got"/>
+    <schema id="8" parent="1" name="information_schema"/>
+    <schema id="9" parent="1" name="laravel_cms"/>
+    <schema id="10" parent="1" name="laravel_login"/>
+    <schema id="11" parent="1" name="manytomany"/>
+    <schema id="12" parent="1" name="middleware"/>
+    <schema id="13" parent="1" name="mujahid"/>
+    <schema id="14" parent="1" name="mysql"/>
+    <schema id="15" parent="1" name="onetomany"/>
+    <schema id="16" parent="1" name="onetoone"/>
+    <schema id="17" parent="1" name="performance_schema"/>
+    <schema id="18" parent="1" name="polymorphic"/>
+    <schema id="19" parent="1" name="polymorphicmanytomany"/>
+    <schema id="20" parent="1" name="student"/>
+    <schema id="21" parent="1" name="sundaysim"/>
+    <schema id="22" parent="1" name="sys"/>
+    <schema id="23" parent="1" name="widget_corp"/>
+    <schema id="24" parent="1" name="wordpress"/>
+    <table id="25" parent="2" name="migrations"/>
+    <table id="26" parent="2" name="password_resets"/>
+    <table id="27" parent="2" name="users"/>
+    <column id="28" parent="25" name="migration">
+      <Position>1</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="29" parent="25" name="batch">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="30" parent="26" name="email">
+      <Position>1</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="31" parent="26" name="token">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="32" parent="26" name="created_at">
+      <Position>3</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <index id="33" parent="26" name="password_resets_email_index">
+      <ColNames>email</ColNames>
+    </index>
+    <index id="34" parent="26" name="password_resets_token_index">
+      <ColNames>token</ColNames>
+    </index>
+    <column id="35" parent="27" name="id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="36" parent="27" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="37" parent="27" name="email">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="38" parent="27" name="password">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="39" parent="27" name="remember_token">
+      <Position>5</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="40" parent="27" name="created_at">
+      <Position>6</Position>
+      <DataType>timestamp|0</DataType>
+    </column>
+    <column id="41" parent="27" name="updated_at">
+      <Position>7</Position>
+      <DataType>timestamp|0</DataType>
+    </column>
+    <index id="42" parent="27" name="users_email_unique">
+      <ColNames>email</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="43" parent="27" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="44" parent="27" name="users_email_unique">
+      <ColNames>email</ColNames>
+      <UnderlyingIndexName>users_email_unique</UnderlyingIndexName>
+    </key>
+  </database-model>
+</dataSource>
