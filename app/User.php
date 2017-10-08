@@ -24,10 +24,12 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    // this user belong to that role
     public function role(){
         return $this->belongsTo('App\Role');
     }
 
+    // this user belong to that photo
     public function photo() {
         return $this->belongsTo('App\Photo');
     }
@@ -47,8 +49,14 @@ class User extends Authenticatable
         return false;
     }
 
+    // this user has many posts
     public function posts(){
         return $this->hasMany('App\Post');
+    }
+
+    public function getGravatarAttribute(){
+        $hash = md5(strtolower(trim($this->attributes('email'))));
+        return "http://wwww.gravatar.com/avatar/$hash";
     }
 }
 
