@@ -63,6 +63,8 @@ Route::group(['middleware'=>'admin'], function(){
         'edit'=>'admin.categories.edit',
     ]]);
 
+    Route::delete('admin/delete/media', 'AdminMediasController@deleteMedia');
+
     Route::resource('admin/media', 'AdminMediasController', ['names'=>[
         'index'=>'admin.media.index',
         'create'=>'admin.media.create',

@@ -2185,19 +2185,20 @@
         },
         {
             "name": "unisharp/laravel-filemanager",
-            "version": "v1.8.0",
+            "version": "v1.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UniSharp/laravel-filemanager.git",
-                "reference": "63a788e5f62d3e9c8b8be8fd5bac9c9d59325e29"
+                "reference": "f5ec3b4e6398d196000aa320c44800e6d8b6fc00"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UniSharp/laravel-filemanager/zipball/63a788e5f62d3e9c8b8be8fd5bac9c9d59325e29",
-                "reference": "63a788e5f62d3e9c8b8be8fd5bac9c9d59325e29",
+                "url": "https://api.github.com/repos/UniSharp/laravel-filemanager/zipball/f5ec3b4e6398d196000aa320c44800e6d8b6fc00",
+                "reference": "f5ec3b4e6398d196000aa320c44800e6d8b6fc00",
                 "shasum": ""
             },
             "require": {
+                "ext-exif": "*",
                 "illuminate/support": ">=4.2.0",
                 "intervention/image": "2.*",
                 "php": ">=5.4.0"
@@ -2215,6 +2216,17 @@
                 "bin/debug"
             ],
             "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Unisharp\\Laravelfilemanager\\LaravelFilemanagerServiceProvider",
+                        "Intervention\\Image\\ImageServiceProvider"
+                    ],
+                    "aliases": {
+                        "Image": "Intervention\\Image\\Facades\\Image"
+                    }
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Unisharp\\Laravelfilemanager\\": "src/"
@@ -2245,7 +2257,7 @@
                 "tinymce",
                 "upload"
             ],
-            "time": "2017-06-11T15:15:20+00:00"
+            "time": "2017-07-13T06:55:50+00:00"
         },
         {
             "name": "vlucas/phpdotenv",

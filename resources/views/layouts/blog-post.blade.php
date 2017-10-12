@@ -52,7 +52,8 @@
                     <a href="#">Contact</a>
                 </li>
                 <li>
-                    <a href="/admin">Alban</a>
+                    {{--<a href="{{route('/admin')}}">Alban</a>--}}
+                    <a href='{!! url('/admin'); !!}'>Admin</a>
                 </li>
             </ul>
         </div>
