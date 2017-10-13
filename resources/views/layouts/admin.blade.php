@@ -12,6 +12,7 @@
     <title>Admin</title>
 
     <!-- Bootstrap Core CSS -->
+    {{--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">--}}
     <link href="{{asset('css/libs.css')}}" rel="stylesheet">
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
 
@@ -48,6 +49,16 @@
 
         <ul class="nav navbar-top-links navbar-right">
 
+
+            {{--@if(auth()->guest())--}}
+                {{--@if(!Request::is('auth/login'))--}}
+                    {{--<li><a href="{{ url('/auth/login') }}">Login</a></li>--}}
+                {{--@endif--}}
+
+                {{--@if(!Request::is('auth/register'))--}}
+                    {{--<li><a href="{{ url('/auth/register') }}">Register</a></li>--}}
+                {{--@endif--}}
+            {{--@else--}}
 
             <!-- /.dropdown -->
             <li class="dropdown">
@@ -326,6 +337,7 @@
             <div class="col-lg-12">
                 <h1 class="page-header"></h1>
 
+                {{--views.admin.posts.index--}}
                 @yield('content')
             </div>
             <!-- /.col-lg-12 -->
@@ -344,7 +356,6 @@
 <!-- Bootstrap Core CSS -->
 {{--<link href="{{asset('css/app.css')}}" rel="stylesheet">--}}
 {{--<link href="{{asset('css/libs.css')}}" rel="stylesheet">--}}
-
 
 
 @yield('scripts')
